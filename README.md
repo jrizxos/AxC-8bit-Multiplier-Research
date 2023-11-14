@@ -1,6 +1,8 @@
 # AxC-8bit-Multiplier-Research
 
 In this repository we publish the code used to run the Genetic Algorithm experiments for our paper:
+### Design space exploration of partial product reduction stage on 8x8 approximate multipliers
+Submitted for the 7th PAnhellenic Conference on Electronics and Telecommunications (PACET 2024). (updated: 17/11/2023)
 
 Repository Authors:
 - Ioannis Rizos
