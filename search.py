@@ -894,9 +894,6 @@ if __name__ == '__main__':
     highscore_entries = load_entries()
 
     print(datetime.now(),'\n')
-
-    #print(individual(convert_to_vals('AaUjQ108sgAf1fLmMO0dQcDk1jxvAEKQHA==')).short_name())
-    #print(individual(convert_to_vals('Bb+9xgW7WReTFgsOV4StUqxXzzzXDBtmGg==')).short_name())
     
     for i in range(1000):
         with open(OUT_FILE,'a') as run_file:
