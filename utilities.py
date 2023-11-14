@@ -1,5 +1,6 @@
 import base64
-from search import VAR_N, BIT_W, get_ints, individual, INP_W
+import pandas as pd
+from search import VAR_N, BIT_W, get_ints, individual, INP_W, get_binary
 from bitarray import bitarray
 
 def convert_64_to_vals(s:str):
@@ -32,6 +33,28 @@ def convert_64_to_16(s:str):
     vals = convert_64_to_vals(s)
     ind = individual(vals)
     return ind.short_name()
+
+def convert_16_to_vals(s:str):
+    dec_int = int(s, base=16)
+    enc_bits = bitarray(endian='big')
+    enc_bits.frombytes(dec_int.to_bytes(length=25,byteorder='big'))
+    enc_str = enc_bits.to01()
+    enc_str = enc_str[len(enc_str)-BIT_W*VAR_N:]
+    vals = get_ints(enc_str)
+    return vals
+
+def convert_16_to_64(s:str):
+    """Converts a base16 Individual name to the corresponding base64 Individual name
+
+        Args:
+            s (str): base16 encoded str
+
+        Returns:
+            (str): corresponding base64 str
+    """
+    vals = convert_16_to_vals(s)
+    ind = individual(vals)
+    return ind.shorter_name()
 
 def create_ax_mult(file):
     """Creates an approximate multiplication table from file.
@@ -77,3 +100,23 @@ def get_ax_mult(a, b, table, width=INP_W):
     """
     stride = 2**width
     return table[a*stride+b]
+
+def get_dataframe(highscores):
+    """Creates a pandas dataframe from an idividual database dictionary.
+
+        Args:
+            highscores (dict[name: individual]): idividual database dictionary
+
+        Returns:
+            dt (DataFrame): generated pandas dataframe
+    """
+    dt = pd.DataFrame(columns = ['score', 'mse', 'util', 'time', 'power', 'vars'],
+                      index = list(highscores.keys()))
+    for k in highscores.keys():
+        dt.loc[k] = pd.Series({'score' : highscores[k].score,
+                               'mse' : highscores[k].mse,
+                               'util' : highscores[k].util, 
+                               'time' : highscores[k].time, 
+                               'power' : highscores[k].power, 
+                               'vars' : highscores[k].vars})
+    return dt

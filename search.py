@@ -33,8 +33,8 @@ VAR_D = ['full_adder',              # domain of each variable
 BIT_W = 5                           # number of possible variables bit width (e.g. 32 possible = 5 bits) 
 INP_W = 8                           # input number bit width
 
-TCL_DEBUG = True                   # set to true if you want TCL script output
-EVL_DEBUG = True                   # set to true if you want evolution debug output
+TCL_DEBUG = False                   # set to true if you want TCL script output
+EVL_DEBUG = False                   # set to true if you want evolution debug output
 
 OUT_FILE = '8x8_runs.txt'           # output file name
 
@@ -203,7 +203,7 @@ def MSE(L1, L2):
             L2 (list of mubers): list 2
 
         Returns:
-            mse (int): mean squared error
+            mse (float): mean squared error
     """
     mse = 0
     if(len(L1) != len(L2)):
@@ -894,6 +894,9 @@ if __name__ == '__main__':
     highscore_entries = load_entries()
 
     print(datetime.now(),'\n')
+
+    #print(individual(convert_to_vals('AaUjQ108sgAf1fLmMO0dQcDk1jxvAEKQHA==')).short_name())
+    #print(individual(convert_to_vals('Bb+9xgW7WReTFgsOV4StUqxXzzzXDBtmGg==')).short_name())
     
     for i in range(1000):
         with open(OUT_FILE,'a') as run_file:
