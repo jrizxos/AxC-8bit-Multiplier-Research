@@ -1,3 +1,16 @@
+#######################################################################################
+## Company Name: Department of Computer Science & Engineering / University of Ioannina 
+##
+## Author: Ioannis Rizos
+##
+## Module: search.py
+##
+## Description: Main program that conducts Genetic Algorithm Search for the paper:
+## "Design space exploration of partial product reduction stage on 8x8 approximate 
+## multipliers". Submitted for the 7th PAnhellenic Conference on Electronics and
+## Telecommunications (PACET 2024). 
+#######################################################################################
+
 import os
 import json
 import copy
