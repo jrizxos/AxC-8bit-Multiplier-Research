@@ -1,3 +1,16 @@
+#######################################################################################
+## Company Name: Department of Computer Science & Engineering / University of Ioannina 
+##
+## Author: Ioannis Rizos
+##
+## Module: utilities.py
+##
+## Description: Additional utilities for statistical study and inspection of individual
+## class objects, for the paper: "Design space exploration of partial product reduction
+## stage on 8x8 approximate multipliers". Submitted for the 7th PAnhellenic Conference
+## on Electronics and  Telecommunications (PACET 2024).
+#######################################################################################
+
 import base64
 import pandas as pd
 from search import VAR_N, BIT_W, get_ints, individual, INP_W, get_binary
