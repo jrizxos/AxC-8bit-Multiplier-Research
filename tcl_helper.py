@@ -1,6 +1,18 @@
+#######################################################################################
+## Company Name: Department of Computer Science & Engineering / University of Ioannina 
+##
+## Author: Ioannis Rizos
+##
+## Module: tcl_helper.py
+##
+## Description: Support api functions to use Vivado in our search code, for the paper:
+## "Design space exploration of partial product reduction stage on 8x8 approximate 
+## multipliers". Submitted for the 7th PAnhellenic Conference on Electronics and
+## Telecommunications (PACET 2024). 
+#######################################################################################
+
 import os
 import shutil
-#from search import MSE, NORMAL_OUT
 from subprocess import Popen, DEVNULL
 
 TOP_DIR = 'tcl_work_dir'
