@@ -32,7 +32,7 @@ begin
 --============= APPROXIMATE SUM ===============
 
 --AFA18
-sum   <= ((not a) and (not b)) or (a and b);
+sum   <= ((not a) and (not b)) or ((not a) and (not c)) or ((not b) and (not c));
 carry <= (a and b) or (c and (a xor b)); ---NO APPROX
 
 end Behavioral;
