@@ -15,7 +15,7 @@ Repository Authors:
 ## Study Results
 
 Using the code in this repository we succeeded in reducing the area of the wallace multiplier, by adding approximation, by 46% (E and F in figure below).
-We also achieve a far more accurate result (still approximate) at 74% of the original area. More information in our paper.<br>
+We also achieve a far more accurate result (still approximate) at 74% of the original area (G and H). More information in our paper.<br>
 ![bar graph](images/bar_graph.png)<br>
 
 ---
