@@ -2,7 +2,7 @@
 
 In this repository we publish the code used to run the Genetic Algorithm experiments for our paper:<br>
 **Design space exploration of partial product reduction stage on 8x8 approximate multipliers**<br>
-Not published yet. Rresented at the 7th PAnhellenic Conference on Electronics and Telecommunications (PACET 2024). (updated: 11/04/2023)
+Not published yet. Presented at the 7th PAnhellenic Conference on Electronics and Telecommunications (PACET 2024). (updated: 11/04/2023)
 
 Repository Authors:
 - Ioannis Rizos
