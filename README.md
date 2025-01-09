@@ -2,13 +2,14 @@
 
 In this repository we publish the code used to run the Genetic Algorithm experiments for our paper:<br>
 **Design space exploration of partial product reduction stage on 8x8 approximate multipliers**<br>
-Not published yet. Presented at the 7th PAnhellenic Conference on Electronics and Telecommunications (PACET 2024). (updated: 11/04/2023)
+Published at [ieeexplore](https://ieeexplore.ieee.org/abstract/document/10497018). Presented at the 7th PAnhellenic Conference on Electronics and Telecommunications (PACET 2024).
 
 Repository Authors:
 - Ioannis Rizos
 - Georgios Papatheodorou
 
-**For any questions please create an Issue within this repository.**
+**For any questions please create an Issue within this repository.**<br>
+**There is a more advanced version of this pipeline [here](https://github.com/jrizxos/Approximate-Reduced-Complexity-Wallace-Multipliers).**
 
 ---
 
